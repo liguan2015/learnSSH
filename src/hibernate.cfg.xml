@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+	"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+	
+	<hibernate-configuration>
+		<session-factory>
+			<!-- 连接数据库的四大参数 -->
+			<property name="hibernate.connection.username">root</property>
+			<property name="hibernate.connection.password">root</property>
+			<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+			<property name="hibernate.connection.url">jdbc:mysql://localhost:3306/ssh</property>
+			<!-- 开启事务的自动提交 -->
+			<property name="hibernate.connection.autocommit">true</property>
+			<!-- 支持MySQL的方言 -->
+			<property name="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</property>
+			<!-- 自动更新数据库结构 -->
+			<property name="hibernate.hbm2ddl.auto">update</property>
+			<property name="hibernate.show_sql">true</property>
+			<!-- 设置PO对象与数据库表的映射关系 -->
+			<mapping resource="cn/fjh/ssh/domain/SshUser.hbm.xml"/>
+		</session-factory>
+	</hibernate-configuration>

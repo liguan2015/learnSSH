@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC 
+		"-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN" 
+		"http://struts.apache.org/dtds/struts-2.1.7.dtd">
+		
+	<struts>
+		<!-- 配置Action的访问路径为.do形式 -->
+		<constant name="struts.action.extension" value="do"/>
+		<!-- 配置struts为开发模式 -->
+		<constant name="struts.devMode" value="true"/>
+		<!-- 配置struts的简单模式 -->
+		<constant name="struts.ui.theme" value="simple"/>
+		<package name="test" namespace="/test" extends="struts-default">
+			<action name="sshUserAction_*" class="cn.fjh.ssh.web.action.SshUserAction" method="{1}">
+				<result name="save">/index.jsp</result>
+			</action>
+		</package>
+	</struts>
