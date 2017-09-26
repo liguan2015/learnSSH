@@ -49,3 +49,5 @@
 * 解决1：升级Spring 版本，说是Spring 大于等于3.2.3的版本才可以支持Java 8 --- 已把spring2.5升级为spring4.3
 * 解决2：用JDK 1.7 
 * test222
+
+
